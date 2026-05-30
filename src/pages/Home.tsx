@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'motion/react';
+import Balatro from '../components/Balatro';
 import { 
   Shield, 
   Globe, 
@@ -295,7 +296,17 @@ export default function Home({ onNavigate }: HomeProps) {
         className="py-24 bg-[#16243D] text-white relative overflow-hidden"
       >
         {/* Soft background textures */}
-        <div className="absolute right-0 top-0 w-[500px] h-[500px] bg-white/5 rounded-full blur-[150px] pointer-events-none" />
+              {/* Animated shader background – absolutely positioned */}
+              <div className="absolute inset-0 z-0 pointer-events-none">
+                  <Balatro
+                      isRotate={false}
+                      mouseInteraction={false}
+                      pixelFilter={1020}
+                      color1="#544f33"    // deep olive/sand
+                      color2="#343a38"    // dark slate
+                      color3="#a39a93"    // warm sand/stone
+                  />
+              </div>
         
         <div className="max-w-7xl mx-auto px-6 relative z-10">
           
