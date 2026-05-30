@@ -1,0 +1,6 @@
+{
+  "name": "Quartzite Trading Services",
+  "description": "Premium supplier of geological instruments, mining tools, PPE, and exploration equipment for the Middle East & Africa.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
