@@ -47,36 +47,24 @@ export default function Home({ onNavigate }: HomeProps) {
       {/* SECTION 1: HERO AREA */}
       <section 
         id="hero"
-        className="relative h-screen min-h-[760px] sm:min-h-[650px] flex items-center justify-center bg-[#0a0a0f] text-white pt-[80px] overflow-hidden"
+        className="relative h-screen min-h-[650px] flex items-center justify-center bg-[#0a0a0f] text-white pt-[80px] overflow-hidden"
       >
-        {/* Blurred fill layer keeps the hero full while the main video stays uncropped */}
+        {/* Background Video Layer */}
         <video
           autoPlay
           loop
           muted
           playsInline
-          aria-hidden="true"
-          className="absolute inset-0 w-full h-full object-cover scale-110 blur-2xl opacity-35 z-0 pointer-events-none"
-        >
-          <source src="/hero-bg.mp4" type="video/mp4" />
-        </video>
-
-        {/* Main video layer: object-contain shows the complete video on desktop and mobile */}
-        <video
-          autoPlay
-          loop
-          muted
-          playsInline
-          className="absolute inset-0 w-full h-full object-contain object-center z-[1] opacity-55 sm:opacity-65 pointer-events-none"
+          className="absolute inset-0 w-full h-full object-cover z-0 opacity-50 pointer-events-none"
         >
           <source src="/hero-bg.mp4" type="video/mp4" />
         </video>
 
         {/* Dynamic contrast guard overlay */}
-        <div className="absolute inset-0 bg-[#0a0a0f]/40 sm:bg-[#0a0a0f]/25 z-10 pointer-events-none" />
+        <div className="absolute inset-0 bg-[#0a0a0f]/0 z-10 pointer-events-none" />
 
         {/* Soft aurora element rendered behind with brand-approved color tones */}
-        <div className="absolute inset-0 z-[2] pointer-events-none opacity-40 sm:opacity-50 mix-blend-screen">
+        <div className="absolute inset-0 z-0 pointer-events-none opacity-70">
           <SoftAurora 
             color1="#B8A99A" 
             color2="#7E9CE3" 
@@ -87,26 +75,26 @@ export default function Home({ onNavigate }: HomeProps) {
         </div>
 
         {/* Content container */}
-        <div className="w-full max-w-5xl mx-auto px-6 text-center relative z-20 space-y-5 sm:space-y-8 select-none -translate-y-8 sm:translate-y-0">
+        <div className="max-w-5xl mx-auto px-6 text-center relative z-20 space-y-8 select-none">
           
           {/* Tagline / Indicator */}
           <motion.div 
             initial={{ opacity: 0, y: 15 }} 
             animate={{ opacity: 1, y: 0 }} 
             transition={{ duration: 0.6 }}
-            className="inline-flex items-center justify-center gap-2 bg-white/5 border border-white/10 px-4 py-1.5 rounded-full text-[10px] sm:text-xs font-semibold tracking-[0.22em] sm:tracking-widest uppercase text-[#B8A99A] max-w-full"
+            className="inline-flex items-center space-x-2 bg-white/5 border border-white/10 px-4 py-1.5 rounded-full text-xs font-semibold tracking-widest uppercase text-[#B8A99A]"
           >
-            <span className="w-2 h-2 shrink-0 rounded-full bg-emerald-500 animate-pulse" />
+            <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
             <span>Dubai, UAE HQ • Serving MEA Operations</span>
           </motion.div>
 
           {/* Heading lines stacked */}
-          <div className="space-y-1 sm:space-y-2">
+          <div className="space-y-2">
             <motion.h1 
               initial={{ opacity: 0, y: 25 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.1 }}
-              className="font-display font-black text-[2.35rem] sm:text-7xl lg:text-8xl leading-[0.88] text-white tracking-tight uppercase text-balance"
+              className="font-display font-black text-5xl sm:text-7xl lg:text-8xl leading-none text-white tracking-tight uppercase"
             >
               PREMIUM TOOLS FOR
             </motion.h1>
@@ -115,7 +103,7 @@ export default function Home({ onNavigate }: HomeProps) {
               initial={{ opacity: 0, y: 25 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="font-display font-black text-[2rem] sm:text-6xl lg:text-7xl leading-[0.9] tracking-tight uppercase text-transparent text-balance"
+              className="font-display font-black text-4xl sm:text-6xl lg:text-7xl leading-none tracking-tight uppercase text-transparent"
               style={{ WebkitTextStroke: '1px #B8A99A', opacity: 0.85 }}
             >
               EXTREME CONDITIONS
@@ -127,7 +115,7 @@ export default function Home({ onNavigate }: HomeProps) {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1.0, delay: 0.4 }}
-            className="text-white/85 text-sm sm:text-lg md:text-xl font-sans max-w-2xl mx-auto leading-relaxed"
+            className="text-white/80 text-base sm:text-lg md:text-xl font-sans max-w-2xl mx-auto leading-relaxed"
           >
             Equipping mining operations, geologists, and exploration professionals across the Middle East & Africa with gear trusted where the Earth gets hard.
           </motion.p>
@@ -137,7 +125,7 @@ export default function Home({ onNavigate }: HomeProps) {
             initial={{ opacity: 0, y: 15 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.6 }}
-            className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 pt-4 sm:pt-4"
+            className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4"
           >
             <button
               onClick={() => onNavigate('#categories')}
@@ -156,7 +144,7 @@ export default function Home({ onNavigate }: HomeProps) {
         </div>
 
         {/* Floating scroll indicator */}
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 hidden sm:flex flex-col items-center space-y-2 text-white/40 text-xs tracking-widest uppercase">
+        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center space-y-2 text-white/40 text-xs tracking-widest uppercase">
           <span className="animate-bounce">↓</span>
           <span>Scroll</span>
         </div>
