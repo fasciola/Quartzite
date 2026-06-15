@@ -49,22 +49,34 @@ export default function Home({ onNavigate }: HomeProps) {
         id="hero"
         className="relative h-screen min-h-[650px] flex items-center justify-center bg-[#0a0a0f] text-white pt-[80px] overflow-hidden"
       >
-        {/* Background Video Layer */}
+        {/* Blurred fill layer keeps the hero full while the main video stays uncropped */}
         <video
           autoPlay
           loop
           muted
           playsInline
-          className="absolute inset-0 w-full h-full object-cover z-0 opacity-50 pointer-events-none"
+          aria-hidden="true"
+          className="absolute inset-0 w-full h-full object-cover scale-110 blur-2xl opacity-35 z-0 pointer-events-none"
+        >
+          <source src="/hero-bg.mp4" type="video/mp4" />
+        </video>
+
+        {/* Main video layer: object-contain shows the complete video on desktop and mobile */}
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="absolute inset-0 w-full h-full object-contain z-[1] opacity-65 pointer-events-none"
         >
           <source src="/hero-bg.mp4" type="video/mp4" />
         </video>
 
         {/* Dynamic contrast guard overlay */}
-        <div className="absolute inset-0 bg-[#0a0a0f]/0 z-10 pointer-events-none" />
+        <div className="absolute inset-0 bg-[#0a0a0f]/25 z-10 pointer-events-none" />
 
         {/* Soft aurora element rendered behind with brand-approved color tones */}
-        <div className="absolute inset-0 z-0 pointer-events-none opacity-70">
+        <div className="absolute inset-0 z-[2] pointer-events-none opacity-50 mix-blend-screen">
           <SoftAurora 
             color1="#B8A99A" 
             color2="#7E9CE3" 
