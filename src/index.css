@@ -19,6 +19,23 @@
   background-size: 40px 40px;
 }
 
+/* EXCO-inspired angular mining shapes, rebuilt with Quartzite colors */
+.hero-left-slab {
+  clip-path: polygon(0 0, 78% 0, 42% 100%, 0% 100%);
+}
+
+.hero-right-slab {
+  clip-path: polygon(34% 0, 100% 0, 100% 100%, 0% 100%);
+}
+
+.hero-bottom-cut {
+  clip-path: polygon(0 52%, 49% 52%, 52% 0, 100% 52%, 100% 100%, 0 100%);
+}
+
+.hero-hex-frame {
+  clip-path: polygon(50% 0%, 94% 25%, 94% 75%, 50% 100%, 6% 75%, 6% 25%);
+}
+
 /* Custom fade in helper class for page transits */
 @keyframes fadeIn {
   from {
