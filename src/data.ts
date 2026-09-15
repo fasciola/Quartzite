@@ -43,7 +43,6 @@ export const PRODUCTS: Product[] = [
             'Assures pristine baseline accuracy for local lab analyzers and XRF devices',
             'Packaged in durable moisture-proof bags for extended safekeeping'
         ],
-        price: 210,
         isFeatured: false,
         inStock: true
     },
@@ -64,7 +63,6 @@ export const PRODUCTS: Product[] = [
             'Essential for precise laboratory diagnostic calibration before drilling begins',
             'Guarantees repeatable, certified scientific benchmarks'
         ],
-        price: 180,
         isFeatured: false,
         inStock: true
     },
@@ -85,7 +83,6 @@ export const PRODUCTS: Product[] = [
             'Removable tags reduce recording transcript errors in active mine labs',
             'Maintains clean database traceability from remote site to final assay results'
         ],
-        price: 45,
         isFeatured: false,
         inStock: true
     },
@@ -108,7 +105,6 @@ export const PRODUCTS: Product[] = [
             'Oil and acid proof outer traction sole avoids slick drilling deck slides',
             'Padded lining absorbs joint shock under rigorous exploration marches'
         ],
-        price: 95,
         isFeatured: false,
         inStock: true
     },
@@ -129,7 +125,6 @@ export const PRODUCTS: Product[] = [
             'Equipped with quick release metal eyelets and molded mounting pads',
             'EVA midsole cushions step impact, combined with slip-resistant outer protection for ultimate heel safety'
         ],
-        price: 115,
         isFeatured: true,
         inStock: true
     },
@@ -150,7 +145,6 @@ export const PRODUCTS: Product[] = [
             'Ergonomic contour design eliminates high pressure bridge pinching',
             'Maintains perfect airtight seals under heavy sweat and dust environments'
         ],
-        price: 45,
         isFeatured: false,
         inStock: true
     },
@@ -171,7 +165,6 @@ export const PRODUCTS: Product[] = [
             'Half coat latex provides excellent breathability while shielding fingers completely',
             'Crinkled latex foam delivers unbeatable grip on wet rock samples and drill shafts'
         ],
-        price: 18,
         isFeatured: false,
         inStock: true
     },
@@ -192,7 +185,6 @@ export const PRODUCTS: Product[] = [
             'Guarantees perfect splash and particulate proof orbital eye defense',
             'Vented frame design avoids lens condense during underground operations'
         ],
-        price: 12,
         isFeatured: false,
         inStock: true
     },
@@ -213,7 +205,6 @@ export const PRODUCTS: Product[] = [
             'Built with mobile phone slots and reinforced lining for severe daily wear',
             'Elasticized back waist allows maximum fit and torso rotation comfort'
         ],
-        price: 54,
         isFeatured: true,
         inStock: true
     },
@@ -234,7 +225,6 @@ export const PRODUCTS: Product[] = [
             'Tear-away heavy zip guarantees safe release under machine pulley traps',
             'Holds multiple notebook spaces, compass loops and identification card sleeves'
         ],
-        price: 15,
         isFeatured: false,
         inStock: true
     },
@@ -255,7 +245,6 @@ export const PRODUCTS: Product[] = [
             'Reinforced knee lining protects against rough mine gravel grazes',
             'Comfort-fit elastic waistband lets surveyors bend and climb with absolute ease'
         ],
-        price: 34,
         isFeatured: false,
         inStock: true
     },
@@ -276,7 +265,6 @@ export const PRODUCTS: Product[] = [
             'Sweat wicking micro mesh fiber handles temperatures up to 50 degrees Celsius',
             'High wash-cycle resistance maintains fluorescent pigment shine and structure'
         ],
-        price: 28,
         isFeatured: false,
         inStock: true
     },
@@ -297,7 +285,6 @@ export const PRODUCTS: Product[] = [
             'Maintains total impact resistance under scorching dry desert weather campaigns',
             'Double strap crown adjustment locks secure alignment during active worksite jumps'
         ],
-        price: 65,
         isFeatured: true,
         inStock: true
     },
@@ -321,7 +308,6 @@ export const PRODUCTS: Product[] = [
             'Integrated tool loops and deep coin/map expansion pockets',
             'Breathable, UV-protective weave prevents thermal locking on hot operations'
         ],
-        price: 65,
         isFeatured: true,
         inStock: true
     }
