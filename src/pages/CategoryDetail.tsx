@@ -76,7 +76,6 @@ export default function CategoryDetail({ categoryId, onNavigate, onRequestQuote 
     const contactMessageInput = document.getElementById('message') as HTMLTextAreaElement | null;
     if (contactMessageInput) {
       const currentText = contactMessageInput.value;
-      const additionText = `Hi Quartzite TS, I would like to request a commercial quote for: ${productName}.`;
       
       if (!currentText.includes(productName)) {
         contactMessageInput.value = currentText 
@@ -299,10 +298,8 @@ export default function CategoryDetail({ categoryId, onNavigate, onRequestQuote 
                   {/* Card bottom tray */}
                   <div className="px-6 pb-6 pt-2 select-none">
                     
-                    {/* Price and Stock status row */}
-                    <div className="flex items-center justify-between pb-4 font-sans border-b border-gray-50">
-                      
-                      {/* Stock status indicator */}
+                    {/* Stock status row */}
+                    <div className="flex items-center pb-4 font-sans border-b border-gray-50">
                       {product.inStock !== false ? (
                         <div className="flex items-center space-x-1.5 text-emerald-600 font-semibold text-xs uppercase tracking-wide">
                           <Check className="w-4 h-4 shrink-0" />
@@ -313,12 +310,6 @@ export default function CategoryDetail({ categoryId, onNavigate, onRequestQuote 
                           <span>DIRECT INQUIRY</span>
                         </div>
                       )}
-
-                      {/* Price tag */}
-                      <div className="text-[#0a0f1d] font-display font-black text-lg">
-                        ${product.price || (product.id === 'estwing-rock-hammer' ? '89' : product.id === 'brunton-transit' ? '395' : '48')}
-                      </div>
-
                     </div>
 
                     {/* Action Button: Navy blue full width */}
