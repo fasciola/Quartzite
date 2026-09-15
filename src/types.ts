@@ -7,7 +7,6 @@ export interface Product {
   features: string[];
   brand: string;
   description: string;
-  price?: number;
   isFeatured?: boolean;
   inStock?: boolean;
 }
